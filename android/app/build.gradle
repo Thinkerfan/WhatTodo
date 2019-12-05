@@ -21,7 +21,8 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 27
+
+    compileSdkVersion 28
 
     lintOptions {
         disable 'InvalidPackage'
@@ -30,7 +31,7 @@ android {
     defaultConfig {
         applicationId "stark.and.whattodo"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -38,10 +39,14 @@ android {
 
    signingConfigs {
        release {
-           keyAlias keystoreProperties['keyAlias']
-           keyPassword keystoreProperties['keyPassword']
-           storeFile file(keystoreProperties['storeFile'])
-           storePassword keystoreProperties['storePassword']
+//           keyAlias keystoreProperties['keyAlias']
+//           keyPassword keystoreProperties['keyPassword']
+//           storeFile file(keystoreProperties['storeFile'])
+//           storePassword keystoreProperties['storePassword']
+           keyAlias 'stark'
+           keyPassword 'thinker'
+           storeFile file('/Users/cfans/Documents/Freedom/cfans.jks')
+           storePassword 'thinker'
        }
    }
 
